@@ -1,0 +1,78 @@
+<script type="text/javascript">
+// Toggle the appended stylesheet for an showing the Design view background grid and outlined controls.
+var win=external.menuArguments;
+var doc=win.document;
+var sCSS='body{background-image:none!important;';
+	sCSS+='background-image: url(\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHSSURBVHhe7ddLisMwEITheI6TA2VrH8VH8VGDRmYIejQGdWi55v8WwRG9EYVK6KFiXdfX+Xlnr5/z4/aWZXmen3f2lAkE+Ib98gnZtm0/P01Rc1fNvg+ZyvIODoNEArleWcB/xAmZTRVI6uJWH5drzGXeczJENkdlARZe6j1RczKV5R0cBokEwqUOWDghs6kCSV3c6uNyjbnMe06GyOaoLMDCS70nak6msryDwyCRQLjUAQsnZDZVIKmLW31crjGXec/JENkclQVYeKn3RM3JVJZ3cBgkEgiXOmDhhMymCiR1cauPyzXmMu85GSKbo7IACy/1nqg5mcryDg6DRALhUgcsnJDZLJ/dexzH7zdrYWt//2/vc3M3RmUBFl7qPVFzvNTxHSKBcKkDFk7IbKpAUhe3+rhcYy7znpMhsjkqC7DwUu+JmpOpLO/gMEgkEC51wMIJmU0VSOriVh+Xa8xl3nMyRDZHZQEWXuo9UXMyleUdHAaJBMKlDlg4IbOpAkld3Orjco25zHtOhsjmqCzAwku9J2pOprK8g8MgkUC41AELJ2Q2VSCpi1t9XK4xl3nPyRDZHJUFWHip90TNyVSWd3AYJBIIlzpg2Zf0k78R7/F4A8jnkVXijvRyAAAAAElFTkSuQmCC\')!important;';
+	sCSS+='background-position:left top!important;';
+	sCSS+='background-size:auto!important;';	
+	sCSS+='background-attachment:scroll!important;';
+	sCSS+='background-repeat:repeat;';
+	sCSS+='outline:yellow solid 1px!important;}';
+	sCSS+='table,tbody,thead,tfoot{outline:Blue solid 1px!important;}';
+	sCSS+='td {outline:purple dotted 1px!important;}';
+	sCSS+='input,textarea,select,button{outline: lime 2px dashed!important;}';
+	sCSS+='p,a,abbr,span,sub,sup,blockquote,label,b,bdo,bdi,cite,code,defn,em,i,kbd,q,samp,small,del,ins,legend,caption,var,wbr{	outline:navy 2px dotted!important;}';
+	sCSS+='div{	outline:red solid 1px!important;background-image:none!important;	background-color:Transparent!important;}';
+	sCSS+='h1,h2,h3,h4,h5,h6{outline:olive dashed 2px;}';
+	sCSS+='iframe,object,embed,svg{	outline:yellow dotted 5px!important;}';
+	sCSS+='svg{	background:none!important;background-image: url(\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHSSURBVHhe7ddLisMwEITheI6TA2VrH8VH8VGDRmYIejQGdWi55v8WwRG9EYVK6KFiXdfX+Xlnr5/z4/aWZXmen3f2lAkE+Ib98gnZtm0/P01Rc1fNvg+ZyvIODoNEArleWcB/xAmZTRVI6uJWH5drzGXeczJENkdlARZe6j1RczKV5R0cBokEwqUOWDghs6kCSV3c6uNyjbnMe06GyOaoLMDCS70nak6msryDwyCRQLjUAQsnZDZVIKmLW31crjGXec/JENkclQVYeKn3RM3JVJZ3cBgkEgiXOmDhhMymCiR1cauPyzXmMu85GSKbo7IACy/1nqg5mcryDg6DRALhUgcsnJDZLJ/dexzH7zdrYWt//2/vc3M3RmUBFl7qPVFzvNTxHSKBcKkDFk7IbKpAUhe3+rhcYy7znpMhsjkqC7DwUu+JmpOpLO/gMEgkEC51wMIJmU0VSOriVh+Xa8xl3nMyRDZHZQEWXuo9UXMyleUdHAaJBMKlDlg4IbOpAkld3Orjco25zHtOhsjmqCzAwku9J2pOprK8g8MgkUC41AELJ2Q2VSCpi1t9XK4xl3nPyRDZHJUFWHip90TNyVSWd3AYJBIIlzpg2Zf0k78R7/F4A8jnkVXijvRyAAAAAElFTkSuQmCC\')!important;';
+	sCSS+='background-position:left top!important;'
+	sCSS+='background-repeat:repeat!important;}';
+	sCSS+='img{	outline:orange dashed 1px!important;}';
+	sCSS+='form{outline:purple dashed 1px!important;}';
+	sCSS+='ul,ol,dl{outline:orange solid 2px!important;}';
+	sCSS+='li{outline:yellow dashed 1px!important;}';
+	sCSS+='canvas, video, audio,article, section, header, footer, figure, figurecaption, progress, meter, mark,address,output,aside{';
+	sCSS+='outline:green dashed 2px!important}';
+	sCSS+='acronym,applet,basefont,bgsound,big,blink,c,center,comment,font,frameset,frame,marquee,nextid,nobr,noembed,noframes,plaintext,spacer,strike,tt,u,xmp,hgroup{';
+	sCSS+='outline:red solid 3px!important;}';
+	sCSS+='dialog,math{	outline:fuchsia solid 3px;	background-color:yellow}';
+function ToggleSSR(e)
+{
+  var docRoot     = doc.documentElement;
+  var docRootName = docRoot.nodeName.toLowerCase();
+  var styleSheets = doc.styleSheets;
+  var lastOwnerNode = null;
+  for (var i = 0; i < styleSheets.length; ++i) {
+    var currentStyleSheet = styleSheets[i];
+    if (currentStyleSheet.title == 'Wire Grid Stylesheet'||currentStyleSheet.id=='wiregrid') {
+      currentStyleSheet.disabled = !currentStyleSheet.disabled;
+      //doc.designMode=(currentStyleSheet.disabled)?'off':'on';
+      return;
+    }
+    if (currentStyleSheet.ownerNode)
+      lastOwnerNode = currentStyleSheet.ownerNode;
+  }
+
+  // we have to attach the stylesheet to the document...
+  // what's the document root ? html ?
+  if (docRootName == "html") {
+    // let's create a link element
+    var headElement = doc.getElementsByTagName("head")[0];
+    var styleElement = doc.createElement("style");
+    styleElement.setAttribute("title", "Wire Grid Stylesheet");
+    styleElement.setAttribute('id','wiregrid');
+    styleElement.setAttribute("type", "text/css");
+    styleElement.innerHTML=sCSS;
+
+    headElement.appendChild(styleElement);
+    styleElement.disabled=false;
+    //doc.designMode='on';
+    //doc.body.setAttribute('editmode','true');
+  }
+}
+try
+{
+ToggleSSR();
+
+}
+catch(e)
+{
+alert(e.message);
+}
+finally
+{
+
+}
+</script>
